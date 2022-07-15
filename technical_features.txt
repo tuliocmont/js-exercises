@@ -1,0 +1,88 @@
+Material de estudo de javascript para a entrevista:
+
+.constants
+.arrow functions
+.rest parameters
+.spread operator
+.template literals
+.object destructuring
+.object shorthand notation
+.array filter
+.array find
+.array forEach
+.array map
+.array reduce
+
+CONSTANTS:
+    Declaração const cria uma variável de escopo de bloco (local) com valor fixo, não podendo ser alterada com atribuições.
+    Sintaxe: const variable
+
+ARROW FUNCTIONS:
+    Sintaxe mais curta quando comparada a uma expressão de função comum, melhor aplicadas em funções que não sejam métodos. Frequentemente utilizadas como callback functions.
+    Sintaxe: console.log(examples.map(example => example.length))
+
+REST PARAMETERS:
+    Rest parameters permite representarmos um número indefinido de argumentos para uma função, como um array.
+    Sintaxe: function(a, b, ...args)
+
+SPREAD OPERATOR:
+    Permite que um objeto iterável seja expandido para ser usado onde argumentos ou arrays são esperados.
+    Sintaxe: const numbers = [1, 2, 3, 4];
+             console.log([0, ...numbers]);
+             OUTPUT: [0, 1, 2, 3, 4]
+
+TEMPLATE LITERALS:
+    São strings que permitem expressões embutidas, podendo ser multi-linhas, deixando o código mais limpo e legível.
+    Sintaxe: `Textotextotexto ${variavelExemplo}
+             Textotextotexto`
+
+OBJECT DESTRUCTURING:
+    Expressão que possibilita extrair dados de arrays ou objetos em variáveis distintas.
+    Sintaxe: const hero = {
+            name: 'Batman',
+            realName: 'Bruce'
+        };
+            const { name, realName } = hero;
+
+            name; // => 'Batman'
+            realName; // => 'Bruce'
+
+OBJECT SHORTHAND NOTATION:
+    Nos permite eliminar código duplicado na hora de popular objetos e dispensa o uso da palavra reservada function na hora de declarar métodos.
+    Sintaxe: const a = 1, b = 2, c = 3;
+             const obj = {
+                a,
+                b,
+                c,
+                sum() {}
+             };
+
+ARRAY FILTER:
+    O método filter() cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.
+    Sintaxe: const arrayFiltered = [1, 2, 3, 4, 5].filter(value => value > 2);
+             OUTPUT: console.log(arrayFiltered); => [3, 4, 5]
+
+ARRAY FIND:
+    O método find() retorna o valor do primeiro elemento do array que satisfizer a função fornecida. Caso contrário, retorna undefined.
+    Sintaxe: const arrayFound = [1, 2, 3, 4, 5].find(value => value > 2);
+             OUTPUT: console.log(arrayFound); => 3
+
+ARRAY FOREACH:
+    O método forEach() executa uma função fornecida em cada elemento de um array, retornando undefined.
+    Sintaxe: const arr = [1, 2, 3, 4].forEach(value => console.log(value));
+             console.log(arr);
+             OUTPUT: 1
+                     2
+                     3
+                     4
+
+ARRAY MAP:
+    O método map() executa uma função fornecida em cada elemento de um array, retornando um novo array.
+    Sintaxe: const arr = [1, 2, 3, 4, 5].map(value => value * value);
+             console.log(arr);
+             OUTPUT: [1, 4, 9, 16, 25]
+
+ARRAY REDUCE:
+    O método reduce() executa uma função reducer para cada elemento do array, retornando um valor único.
+    Sintaxe: const arr = [1, 2, 3, 4, 5].reduce((accumulator, currentValue) => accumulator + currentValue);
+             OUTPUT: console.log(arr); => 15
